@@ -16,10 +16,10 @@ y = np.load("dataset_fixed/Y_fixed.npy")
 print(x.shape)
 print(y.shape)
 
-n = 5
+number= 5
 
-# for i in range(1, n+1):
-#     ax = plt.subplot(1, n, i)
+# for i in range(1, number+1):
+#     ax = plt.subplot(1, number, i)
 #     plt.imshow(x[i])
 #     print(">> ", i, y[i])
 #     plt.gray()
@@ -32,16 +32,49 @@ plt.title(y[inx])
 plt.show()
 
 
-# x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.30, random_state=42)
-#
-# print("Training set feature matrix shape: " + str(x_train.shape))
-# print("Training set classification matrix shape: " + str(y_train.shape))
-# print("Testing set feature matrix shape: " + str(x_test.shape))
-# print("Testing set classification matrix shape: " + str(y_test.shape))
-#
-# logreg = linear_model.LogisticRegression(random_state = 42,max_iter= 150)
-#
-# x_train_rolled = np.reshape(x_train, (x_train.shape[0], -1 ) )
-# print(x_train_rolled.shape)
-#
-# print("test accuracy: {} ".format(logreg.fit(x_train_rolled.T, y_train.T).score(x_test.T, y_test.T)))
+x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.2, random_state=44)
+
+print("Training set feature matrix shape: " + str(x_train.shape))
+print("Training set classification matrix shape: " + str(y_train.shape))
+print("Testing set feature matrix shape: " + str(x_test.shape))
+print("Testing set classification matrix shape: " + str(y_test.shape))
+print("------------------------------------------------")
+
+x_train_rolled = np.reshape(x_train, (x_train.shape[0], -1 ) )
+m, n = x_train_rolled.shape
+print("n: ", n, "; m: ", m)
+print(x_train_rolled.shape)
+y_train_rolled = np.reshape(np.argmax(y_train, axis = 1), (m,)) # eles pedem assim
+print("Training set rolled feature matrix shape: ", x_train_rolled.shape)
+print("Training set rolled classification matrix shape: ", y_train_rolled.shape)
+print("------------------------------------------------")
+x_test_rolled = np.reshape(x_test, (x_test.shape[0], -1))
+mt, nt = x_test_rolled.shape
+print("nt: ", nt, "; mt: ", mt)
+y_test_rolled = np.reshape(np.argmax(y_test, axis = 1), (mt,))
+print("Testing set rolled feature matrix shape: ", x_test_rolled.shape)
+print("Testing set rolled classification matrix shape: ", y_test_rolled.shape)
+
+inx = 1
+plt.imshow(x_train[inx])
+plt.title(y_train_rolled[inx])
+plt.show()
+
+# x train:  (4096, 348)
+# x test:  (4096, 62)
+# y train:  (1, 348)
+# y test:  (1, 62)
+
+logreg = linear_model.LogisticRegression(random_state = 42,max_iter= 5000)
+temp_obj = logreg.fit(x_train_rolled, y_train_rolled)
+print("train accuracy: {} ".format(temp_obj.score(x_train_rolled, y_train_rolled)  ))
+print("test accuracy: {} ".format(temp_obj.score(x_test_rolled, y_test_rolled)  ))
+
+print(">>> ", x_train_rolled[0].shape)
+t_t_r = np.reshape(x_train_rolled[0], (1, x_train_rolled[0].shape[0]))  # shape[0] porque ja retirei um deles, ao ir busca-lo
+t_ts_r = np.reshape(x_test_rolled[0], (1, x_test_rolled[0].shape[0]))
+
+print("predictions train (", y_train_rolled[0], "); got ", temp_obj.predict(t_t_r))
+print("predictions testing (", y_test_rolled[0], "); got ", temp_obj.predict(t_ts_r))
+
+# see: https://stackoverflow.com/questions/35956902/how-to-evaluate-cost-function-for-scikit-learn-logisticregression
