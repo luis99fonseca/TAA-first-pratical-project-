@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import sys
 from sklearn.model_selection import train_test_split
 from sklearn import linear_model
+import time
 
 # x = np.load("X.npy")
 # y = np.load("Y.npy")
@@ -65,16 +66,59 @@ plt.show()
 # y train:  (1, 348)
 # y test:  (1, 62)
 
-logreg = linear_model.LogisticRegression(random_state = 42,max_iter= 5000)
-temp_obj = logreg.fit(x_train_rolled, y_train_rolled)
-print("train accuracy: {} ".format(temp_obj.score(x_train_rolled, y_train_rolled)  ))
-print("test accuracy: {} ".format(temp_obj.score(x_test_rolled, y_test_rolled)  ))
-
-print(">>> ", x_train_rolled[0].shape)
-t_t_r = np.reshape(x_train_rolled[0], (1, x_train_rolled[0].shape[0]))  # shape[0] porque ja retirei um deles, ao ir busca-lo
-t_ts_r = np.reshape(x_test_rolled[0], (1, x_test_rolled[0].shape[0]))
-
-print("predictions train (", y_train_rolled[0], "); got ", temp_obj.predict(t_t_r))
-print("predictions testing (", y_test_rolled[0], "); got ", temp_obj.predict(t_ts_r))
+########################
+# logreg = linear_model.LogisticRegression(random_state = 42,max_iter= 5000) #solver='lbfgs', penalty='l2'
+# temp_obj = logreg.fit(x_train_rolled, y_train_rolled)
+# print("train accuracy: {} ".format(temp_obj.score(x_train_rolled, y_train_rolled)  ))
+# print("test accuracy: {} ".format(temp_obj.score(x_test_rolled, y_test_rolled)  ))
+#
+# print(">>> ", x_train_rolled[0].shape)
+# t_t_r = np.reshape(x_train_rolled[0], (1, x_train_rolled[0].shape[0]))  # shape[0] porque ja retirei um deles, ao ir busca-lo
+# t_ts_r = np.reshape(x_test_rolled[0], (1, x_test_rolled[0].shape[0]))
+#
+# print("predictions train (", y_train_rolled[0], "); got ", temp_obj.predict(t_t_r))
+# print("predictions testing (", y_test_rolled[0], "); got ", temp_obj.predict(t_ts_r))
+#
+# print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+#
+# logreg = linear_model.LogisticRegression(random_state = 42,max_iter= 5000, solver='lbfgs', penalty='l2')
+# temp_obj = logreg.fit(x_train_rolled, y_train_rolled)
+# print("train accuracy: {} ".format(temp_obj.score(x_train_rolled, y_train_rolled)  ))
+# print("test accuracy: {} ".format(temp_obj.score(x_test_rolled, y_test_rolled)  ))
+#
+# print(">>> ", x_train_rolled[0].shape)
+# t_t_r = np.reshape(x_train_rolled[0], (1, x_train_rolled[0].shape[0]))  # shape[0] porque ja retirei um deles, ao ir busca-lo
+# t_ts_r = np.reshape(x_test_rolled[0], (1, x_test_rolled[0].shape[0]))
+#
+# print("predictions train (", y_train_rolled[0], "); got ", temp_obj.predict(t_t_r))
+# print("predictions testing (", y_test_rolled[0], "); got ", temp_obj.predict(t_ts_r))
+########################
 
 # see: https://stackoverflow.com/questions/35956902/how-to-evaluate-cost-function-for-scikit-learn-logisticregression
+
+solvers = ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
+penalties = ['l1', 'l2', 'elasticnet', 'none']
+C_rgl = [0.01, 0.03, 0.1, 0.3, 1, 1.3]
+
+for s in solvers:
+    for p in penalties:
+        for c in C_rgl:
+            try:
+                t1 = time.time()
+                logreg = linear_model.LogisticRegression(random_state=42, max_iter=5000, solver=s, penalty=p, C = c)
+                temp_obj = logreg.fit(x_train_rolled, y_train_rolled)
+                print("GOOD: --------", s, " - ", p, " - ", c, "--------")
+                print("In ", t1 - time.time(), " s")
+                print("train accuracy: {} ".format(temp_obj.score(x_train_rolled, y_train_rolled)))
+                print("test accuracy: {} ".format(temp_obj.score(x_test_rolled, y_test_rolled)))
+
+                t_t_r = np.reshape(x_train_rolled[0], (
+                1, x_train_rolled[0].shape[0]))  # shape[0] porque ja retirei um deles, ao ir busca-lo
+                t_ts_r = np.reshape(x_test_rolled[0], (1, x_test_rolled[0].shape[0]))
+
+                print("predictions train (", y_train_rolled[0], "); got ", temp_obj.predict(t_t_r))
+                print("predictions testing (", y_test_rolled[0], "); got ", temp_obj.predict(t_ts_r))
+            except:
+                print("ERROR: --------", s, " - ", p, " - ", c, "--------")
+                continue
+

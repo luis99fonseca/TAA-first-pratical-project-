@@ -1,0 +1,423 @@
+luis@luis-HP-Pavilion-Laptop-15-cc5xx:~/Desktop/TAA/Projetos/TAA-first-pratical-project-$ python3 ml-one.py 0
+(2062, 64, 64)
+(2062, 10)
+/home/luis/.local/lib/python3.6/site-packages/matplotlib/text.py:1165: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if s != self._text:
+Training set feature matrix shape: (1649, 64, 64)
+Training set classification matrix shape: (1649, 10)
+Testing set feature matrix shape: (413, 64, 64)
+Testing set classification matrix shape: (413, 10)
+------------------------------------------------
+n:  4096 ; m:  1649
+(1649, 4096)
+Training set rolled feature matrix shape:  (1649, 4096)
+Training set rolled classification matrix shape:  (1649,)
+------------------------------------------------
+nt:  4096 ; mt:  413
+Testing set rolled feature matrix shape:  (413, 4096)
+Testing set rolled classification matrix shape:  (413,)
+ERROR: -------- newton-cg  -  l1  -  0.01 --------
+ERROR: -------- newton-cg  -  l1  -  0.03 --------
+ERROR: -------- newton-cg  -  l1  -  0.1 --------
+ERROR: -------- newton-cg  -  l1  -  0.3 --------
+ERROR: -------- newton-cg  -  l1  -  1 --------
+ERROR: -------- newton-cg  -  l1  -  1.3 --------
+/home/luis/.local/lib/python3.6/site-packages/scipy/optimize/linesearch.py:314: LineSearchWarning: The line search algorithm did not converge
+  warn('The line search algorithm did not converge', LineSearchWarning)
+/home/luis/.local/lib/python3.6/site-packages/sklearn/utils/optimize.py:204: UserWarning: Line Search failed
+  warnings.warn('Line Search failed')
+GOOD: -------- newton-cg  -  l2  -  0.01 --------
+In  -15.16161847114563  s
+train accuracy: 0.8283808368708309 
+test accuracy: 0.6949152542372882 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/scipy/optimize/linesearch.py:314: LineSearchWarning: The line search algorithm did not converge
+  warn('The line search algorithm did not converge', LineSearchWarning)
+/home/luis/.local/lib/python3.6/site-packages/sklearn/utils/optimize.py:204: UserWarning: Line Search failed
+  warnings.warn('Line Search failed')
+GOOD: -------- newton-cg  -  l2  -  0.03 --------
+In  -24.149179935455322  s
+train accuracy: 0.8884172225591267 
+test accuracy: 0.7215496368038741 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/scipy/optimize/linesearch.py:314: LineSearchWarning: The line search algorithm did not converge
+  warn('The line search algorithm did not converge', LineSearchWarning)
+/home/luis/.local/lib/python3.6/site-packages/sklearn/utils/optimize.py:204: UserWarning: Line Search failed
+  warnings.warn('Line Search failed')
+GOOD: -------- newton-cg  -  l2  -  0.1 --------
+In  -43.93322253227234  s
+train accuracy: 0.9526986052152819 
+test accuracy: 0.7360774818401937 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/scipy/optimize/linesearch.py:314: LineSearchWarning: The line search algorithm did not converge
+  warn('The line search algorithm did not converge', LineSearchWarning)
+/home/luis/.local/lib/python3.6/site-packages/sklearn/utils/optimize.py:204: UserWarning: Line Search failed
+  warnings.warn('Line Search failed')
+GOOD: -------- newton-cg  -  l2  -  0.3 --------
+In  -63.57096028327942  s
+train accuracy: 0.9927228623408126 
+test accuracy: 0.7336561743341404 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/scipy/optimize/linesearch.py:314: LineSearchWarning: The line search algorithm did not converge
+  warn('The line search algorithm did not converge', LineSearchWarning)
+/home/luis/.local/lib/python3.6/site-packages/sklearn/utils/optimize.py:204: UserWarning: Line Search failed
+  warnings.warn('Line Search failed')
+GOOD: -------- newton-cg  -  l2  -  1 --------
+In  -70.9006187915802  s
+train accuracy: 1.0 
+test accuracy: 0.7312348668280871 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- newton-cg  -  l2  -  1.3 --------
+In  -101.91701173782349  s
+train accuracy: 1.0 
+test accuracy: 0.7288135593220338 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+ERROR: -------- newton-cg  -  elasticnet  -  0.01 --------
+ERROR: -------- newton-cg  -  elasticnet  -  0.03 --------
+ERROR: -------- newton-cg  -  elasticnet  -  0.1 --------
+ERROR: -------- newton-cg  -  elasticnet  -  0.3 --------
+ERROR: -------- newton-cg  -  elasticnet  -  1 --------
+ERROR: -------- newton-cg  -  elasticnet  -  1.3 --------
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- newton-cg  -  none  -  0.01 --------
+In  -28.201915979385376  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- newton-cg  -  none  -  0.03 --------
+In  -27.77811336517334  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- newton-cg  -  none  -  0.1 --------
+In  -28.104083776474  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- newton-cg  -  none  -  0.3 --------
+In  -28.072023391723633  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- newton-cg  -  none  -  1 --------
+In  -27.70115089416504  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- newton-cg  -  none  -  1.3 --------
+In  -27.687673568725586  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+ERROR: -------- lbfgs  -  l1  -  0.01 --------
+ERROR: -------- lbfgs  -  l1  -  0.03 --------
+ERROR: -------- lbfgs  -  l1  -  0.1 --------
+ERROR: -------- lbfgs  -  l1  -  0.3 --------
+ERROR: -------- lbfgs  -  l1  -  1 --------
+ERROR: -------- lbfgs  -  l1  -  1.3 --------
+GOOD: -------- lbfgs  -  l2  -  0.01 --------
+In  -10.203011751174927  s
+train accuracy: 0.8283808368708309 
+test accuracy: 0.6949152542372882 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- lbfgs  -  l2  -  0.03 --------
+In  -20.443356037139893  s
+train accuracy: 0.8878107944208611 
+test accuracy: 0.7215496368038741 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- lbfgs  -  l2  -  0.1 --------
+In  -25.568646907806396  s
+train accuracy: 0.9533050333535477 
+test accuracy: 0.7360774818401937 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- lbfgs  -  l2  -  0.3 --------
+In  -50.61193084716797  s
+train accuracy: 0.9927228623408126 
+test accuracy: 0.7336561743341404 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- lbfgs  -  l2  -  1 --------
+In  -71.69731593132019  s
+train accuracy: 1.0 
+test accuracy: 0.7312348668280871 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- lbfgs  -  l2  -  1.3 --------
+In  -63.75959062576294  s
+train accuracy: 1.0 
+test accuracy: 0.7288135593220338 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+ERROR: -------- lbfgs  -  elasticnet  -  0.01 --------
+ERROR: -------- lbfgs  -  elasticnet  -  0.03 --------
+ERROR: -------- lbfgs  -  elasticnet  -  0.1 --------
+ERROR: -------- lbfgs  -  elasticnet  -  0.3 --------
+ERROR: -------- lbfgs  -  elasticnet  -  1 --------
+ERROR: -------- lbfgs  -  elasticnet  -  1.3 --------
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- lbfgs  -  none  -  0.01 --------
+In  -4.1711554527282715  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- lbfgs  -  none  -  0.03 --------
+In  -4.215105056762695  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- lbfgs  -  none  -  0.1 --------
+In  -4.772190809249878  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- lbfgs  -  none  -  0.3 --------
+In  -4.484310865402222  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- lbfgs  -  none  -  1 --------
+In  -4.441937446594238  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- lbfgs  -  none  -  1.3 --------
+In  -3.994703531265259  s
+train accuracy: 1.0 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- liblinear  -  l1  -  0.01 --------
+In  -2.412135362625122  s
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+predictions train ( 8 ); got  [2]
+predictions testing ( 6 ); got  [2]
+GOOD: -------- liblinear  -  l1  -  0.03 --------
+In  -2.805626153945923  s
+train accuracy: 0.3232261976955731 
+test accuracy: 0.27602905569007263 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [9]
+GOOD: -------- liblinear  -  l1  -  0.1 --------
+In  -2.9745452404022217  s
+train accuracy: 0.6494845360824743 
+test accuracy: 0.5181598062953995 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- liblinear  -  l1  -  0.3 --------
+In  -3.6650962829589844  s
+train accuracy: 0.8259551243177683 
+test accuracy: 0.6585956416464891 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- liblinear  -  l1  -  1 --------
+In  -5.112480401992798  s
+train accuracy: 0.9411764705882353 
+test accuracy: 0.6924939467312349 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- liblinear  -  l1  -  1.3 --------
+In  -5.677459001541138  s
+train accuracy: 0.9630078835657975 
+test accuracy: 0.6876513317191283 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- liblinear  -  l2  -  0.01 --------
+In  -6.283508539199829  s
+train accuracy: 0.8089751364463311 
+test accuracy: 0.6924939467312349 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- liblinear  -  l2  -  0.03 --------
+In  -7.805224180221558  s
+train accuracy: 0.8611279563371741 
+test accuracy: 0.7142857142857143 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- liblinear  -  l2  -  0.1 --------
+In  -9.786786556243896  s
+train accuracy: 0.9229836264402669 
+test accuracy: 0.7239709443099274 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- liblinear  -  l2  -  0.3 --------
+In  -12.655663013458252  s
+train accuracy: 0.9733171619163129 
+test accuracy: 0.7167070217917676 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- liblinear  -  l2  -  1 --------
+In  -16.32695960998535  s
+train accuracy: 0.9981807155852032 
+test accuracy: 0.7191283292978208 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- liblinear  -  l2  -  1.3 --------
+In  -16.559749603271484  s
+train accuracy: 1.0 
+test accuracy: 0.711864406779661 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+ERROR: -------- liblinear  -  elasticnet  -  0.01 --------
+ERROR: -------- liblinear  -  elasticnet  -  0.03 --------
+ERROR: -------- liblinear  -  elasticnet  -  0.1 --------
+ERROR: -------- liblinear  -  elasticnet  -  0.3 --------
+ERROR: -------- liblinear  -  elasticnet  -  1 --------
+ERROR: -------- liblinear  -  elasticnet  -  1.3 --------
+ERROR: -------- liblinear  -  none  -  0.01 --------
+ERROR: -------- liblinear  -  none  -  0.03 --------
+ERROR: -------- liblinear  -  none  -  0.1 --------
+ERROR: -------- liblinear  -  none  -  0.3 --------
+ERROR: -------- liblinear  -  none  -  1 --------
+ERROR: -------- liblinear  -  none  -  1.3 --------
+ERROR: -------- sag  -  l1  -  0.01 --------
+ERROR: -------- sag  -  l1  -  0.03 --------
+ERROR: -------- sag  -  l1  -  0.1 --------
+ERROR: -------- sag  -  l1  -  0.3 --------
+ERROR: -------- sag  -  l1  -  1 --------
+ERROR: -------- sag  -  l1  -  1.3 --------
+GOOD: -------- sag  -  l2  -  0.01 --------
+In  -20.127182245254517  s
+train accuracy: 0.8259551243177683 
+test accuracy: 0.6924939467312349 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- sag  -  l2  -  0.03 --------
+In  -10.616713762283325  s
+train accuracy: 0.8859915100060642 
+test accuracy: 0.7215496368038741 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- sag  -  l2  -  0.1 --------
+In  -24.77343440055847  s
+train accuracy: 0.9508793208004851 
+test accuracy: 0.7239709443099274 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- sag  -  l2  -  0.3 --------
+In  -52.65372180938721  s
+train accuracy: 0.9933292904790783 
+test accuracy: 0.7239709443099274 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- sag  -  l2  -  1 --------
+In  -107.00771594047546  s
+train accuracy: 1.0 
+test accuracy: 0.7142857142857143 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- sag  -  l2  -  1.3 --------
+In  -122.29770827293396  s
+train accuracy: 1.0 
+test accuracy: 0.7142857142857143 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+ERROR: -------- sag  -  elasticnet  -  0.01 --------
+ERROR: -------- sag  -  elasticnet  -  0.03 --------
+ERROR: -------- sag  -  elasticnet  -  0.1 --------
+ERROR: -------- sag  -  elasticnet  -  0.3 --------
+ERROR: -------- sag  -  elasticnet  -  1 --------
+ERROR: -------- sag  -  elasticnet  -  1.3 --------
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- sag  -  none  -  0.01 --------
+In  -473.63605427742004  s
+train accuracy: 1.0 
+test accuracy: 0.7142857142857143 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- sag  -  none  -  0.03 --------
+In  -474.70909452438354  s
+train accuracy: 1.0 
+test accuracy: 0.7142857142857143 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- sag  -  none  -  0.1 --------
+In  -475.9732897281647  s
+train accuracy: 1.0 
+test accuracy: 0.7142857142857143 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- sag  -  none  -  0.3 --------
+In  -472.27923488616943  s
+train accuracy: 1.0 
+test accuracy: 0.7142857142857143 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- sag  -  none  -  1 --------
+In  -474.70112442970276  s
+train accuracy: 1.0 
+test accuracy: 0.7142857142857143 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+/home/luis/.local/lib/python3.6/site-packages/sklearn/linear_model/_logistic.py:1505: UserWarning: Setting penalty='none' will ignore the C and l1_ratio parameters
+  "Setting penalty='none' will ignore the C and l1_ratio "
+GOOD: -------- sag  -  none  -  1.3 --------
+In  -490.63811206817627  s
+train accuracy: 1.0 
+test accuracy: 0.7142857142857143 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [6]
+GOOD: -------- saga  -  l1  -  0.01 --------
+In  -2.0203843116760254  s
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+predictions train ( 8 ); got  [2]
+predictions testing ( 6 ); got  [2]
+GOOD: -------- saga  -  l1  -  0.03 --------
+In  -1150.6546494960785  s
+train accuracy: 0.16676773802304426 
+test accuracy: 0.13317191283292978 
+predictions train ( 8 ); got  [2]
+predictions testing ( 6 ); got  [2]
+GOOD: -------- saga  -  l1  -  0.1 --------
+In  -1288.0194187164307  s
+train accuracy: 0.6228016979987872 
+test accuracy: 0.49878934624697335 
+predictions train ( 8 ); got  [8]
+predictions testing ( 6 ); got  [9]
+
