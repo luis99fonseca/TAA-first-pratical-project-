@@ -1,0 +1,256 @@
+---------- c=0.01; g=0.01; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.01; g=0.03; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.01; g=0.1; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.01; g=0.3; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.01; g=1; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.01; g=3; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.01; g=10; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.01; g=30; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.03; g=0.01; k=rbf
+train accuracy: 0.10976349302607641 
+test accuracy: 0.08232445520581114 
+end ----------
+---------- c=0.03; g=0.03; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.03; g=0.1; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.03; g=0.3; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.03; g=1; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.03; g=3; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.03; g=10; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.03; g=30; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.1; g=0.01; k=rbf
+train accuracy: 0.6124924196482717 
+test accuracy: 0.47699757869249393 
+end ----------
+---------- c=0.1; g=0.03; k=rbf
+train accuracy: 0.19648271679805943 
+test accuracy: 0.1162227602905569 
+end ----------
+---------- c=0.1; g=0.1; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.1; g=0.3; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.1; g=1; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.1; g=3; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.1; g=10; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.1; g=30; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.3; g=0.01; k=rbf
+train accuracy: 0.8405093996361431 
+test accuracy: 0.6924939467312349 
+end ----------
+---------- c=0.3; g=0.03; k=rbf
+train accuracy: 0.9011522134627047 
+test accuracy: 0.5641646489104116 
+end ----------
+---------- c=0.3; g=0.1; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.3; g=0.3; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.3; g=1; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.3; g=3; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.3; g=10; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=0.3; g=30; k=rbf
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=1; g=0.01; k=rbf
+train accuracy: 0.9648271679805943 
+test accuracy: 0.784503631961259 
+end ----------
+---------- c=1; g=0.03; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.7796610169491526 
+end ----------
+---------- c=1; g=0.1; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.3099273607748184 
+end ----------
+---------- c=1; g=0.3; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=1; g=1; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=1; g=3; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=1; g=10; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=1; g=30; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=3; g=0.01; k=rbf
+train accuracy: 0.9993935718617344 
+test accuracy: 0.8208232445520581 
+end ----------
+---------- c=3; g=0.03; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.8038740920096852 
+end ----------
+---------- c=3; g=0.1; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.35108958837772397 
+end ----------
+---------- c=3; g=0.3; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=3; g=1; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=3; g=3; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=3; g=10; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=3; g=30; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=10; g=0.01; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.8208232445520581 
+end ----------
+---------- c=10; g=0.03; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.8038740920096852 
+end ----------
+---------- c=10; g=0.1; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.35108958837772397 
+end ----------
+---------- c=10; g=0.3; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=10; g=1; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=10; g=3; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=10; g=10; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=10; g=30; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=30; g=0.01; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.8208232445520581 
+end ----------
+---------- c=30; g=0.03; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.8038740920096852 
+end ----------
+---------- c=30; g=0.1; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.35108958837772397 
+end ----------
+---------- c=30; g=0.3; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=30; g=1; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=30; g=3; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=30; g=10; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
+---------- c=30; g=30; k=rbf
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+end ----------
