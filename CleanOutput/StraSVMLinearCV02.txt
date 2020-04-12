@@ -1,0 +1,16 @@
+GOOD: -------- c: 0.02  - k: linear
+In  -58.15180540084839  s
+train accuracy: 0.9357186173438448 
+test accuracy: 0.8087167070217918 
+in:  72.0470027923584
+GOOD: -------- c: 0.03  - k: linear
+In  -54.37703013420105  s
+train accuracy: 0.9563371740448757 
+test accuracy: 0.8159806295399515 
+in:  67.7916100025177
+GOOD: -------- c: 0.4  - k: linear
+In  -50.556270599365234  s
+train accuracy: 1.0 
+test accuracy: 0.8159806295399515 
+in:  63.628361225128174
+

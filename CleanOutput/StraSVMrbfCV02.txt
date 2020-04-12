@@ -1,0 +1,63 @@
+(2062, 64, 64)
+(2062, 10)
+Training set feature matrix shape: (1649, 64, 64)
+Training set classification matrix shape: (1649, 10)
+Testing set feature matrix shape: (413, 64, 64)
+Testing set classification matrix shape: (413, 10)
+------------------------------------------------
+n:  4096 ; m:  1649
+(1649, 4096)
+Training set rolled feature matrix shape:  (1649, 4096)
+Training set rolled classification matrix shape:  (1649,)
+------------------------------------------------
+nt:  4096 ; mt:  413
+Testing set rolled feature matrix shape:  (413, 4096)
+Testing set rolled classification matrix shape:  (413,)
+>>>  [8 4 5 ... 6 9 2]
+{0: 164, 1: 165, 2: 165, 3: 165, 4: 165, 5: 166, 6: 165, 7: 165, 8: 166, 9: 163}
+{0: 41, 1: 41, 2: 41, 3: 41, 4: 42, 5: 41, 6: 42, 7: 41, 8: 42, 9: 41}
+GOOD: -------- c: 2  - k: rbf  -  g: 0.01
+In  -104.83704900741577  s
+train accuracy: 0.9945421467556095 
+test accuracy: 0.8498789346246973 
+in:  123.19248676300049
+GOOD: -------- c: 2  - k: rbf  -  g: 0.012
+In  -111.90872311592102  s
+train accuracy: 0.9951485748938751 
+test accuracy: 0.8595641646489104 
+in:  130.9758162498474
+GOOD: -------- c: 2  - k: rbf  -  g: 0.014
+In  -116.454026222229  s
+train accuracy: 0.9987871437234688 
+test accuracy: 0.8571428571428571 
+in:  135.68976974487305
+GOOD: -------- c: 2.5  - k: rbf  -  g: 0.01
+In  -107.97750496864319  s
+train accuracy: 0.9957550030321407 
+test accuracy: 0.8595641646489104 
+in:  126.36745166778564
+GOOD: -------- c: 2.5  - k: rbf  -  g: 0.012
+In  -112.95734143257141  s
+train accuracy: 1.0 
+test accuracy: 0.864406779661017 
+in:  131.72105932235718
+GOOD: -------- c: 2.5  - k: rbf  -  g: 0.014
+In  -116.67565369606018  s
+train accuracy: 1.0 
+test accuracy: 0.8595641646489104 
+in:  136.12429547309875
+GOOD: -------- c: 3  - k: rbf  -  g: 0.01
+In  -107.40515518188477  s
+train accuracy: 0.9993935718617344 
+test accuracy: 0.8595641646489104 
+in:  125.77171587944031
+GOOD: -------- c: 3  - k: rbf  -  g: 0.012
+In  -113.16441798210144  s
+train accuracy: 1.0 
+test accuracy: 0.864406779661017 
+in:  132.21460580825806
+GOOD: -------- c: 3  - k: rbf  -  g: 0.014
+In  -116.7621636390686  s
+train accuracy: 1.0 
+test accuracy: 0.8595641646489104 
+in:  136.37844800949097

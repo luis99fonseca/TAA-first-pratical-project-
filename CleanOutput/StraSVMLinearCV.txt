@@ -1,0 +1,43 @@
+GOOD: -------- c: 0.01  - k: linear
+In  -68.30080986022949  s
+train accuracy: 0.8926622195269861 
+test accuracy: 0.7820823244552058 
+in:  84.55115342140198
+GOOD: -------- c: 0.03  - k: linear
+In  -53.74081754684448  s
+train accuracy: 0.9563371740448757 
+test accuracy: 0.8159806295399515 
+in:  67.17881894111633
+GOOD: -------- c: 0.1  - k: linear
+In  -50.718642711639404  s
+train accuracy: 0.9963614311704063 
+test accuracy: 0.8135593220338984 
+in:  64.21641516685486
+GOOD: -------- c: 0.3  - k: linear
+In  -51.9628324508667  s
+train accuracy: 1.0 
+test accuracy: 0.8159806295399515 
+in:  65.32349133491516
+GOOD: -------- c: 1  - k: linear
+In  -54.007224798202515  s
+train accuracy: 1.0 
+test accuracy: 0.8159806295399515 
+in:  67.19951701164246
+GOOD: -------- c: 3  - k: linear
+In  -50.89480972290039  s
+train accuracy: 1.0 
+test accuracy: 0.8159806295399515 
+in:  64.05757474899292
+
+--------------------------
+GOOD: -------- c: 6  - k: linear
+In  -52.42034411430359  s
+train accuracy: 1.0 
+test accuracy: 0.8159806295399515 
+in:  66.71217107772827
+GOOD: -------- c: 10  - k: linear
+In  -52.42320132255554  s
+train accuracy: 1.0 
+test accuracy: 0.8159806295399515 
+in:  66.82365274429321
+

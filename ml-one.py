@@ -27,13 +27,13 @@ number= 5
 #     plt.axis('off')
 # plt.show()
 
-inx = int(sys.argv[1])
-plt.imshow(x[inx])
-plt.title(y[inx])
-plt.show()
+# inx = int(sys.argv[1])
+# plt.imshow(x[inx])
+# plt.title(y[inx])
+# plt.show()
 
 
-x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.2, random_state=44)
+x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.2, random_state=44, stratify=y)
 
 print("Training set feature matrix shape: " + str(x_train.shape))
 print("Training set classification matrix shape: " + str(y_train.shape))
