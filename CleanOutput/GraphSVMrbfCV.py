@@ -135,7 +135,7 @@ if False:    # without stratify
 
 else: # with stratify
     print("stratify")
-    if False:    # 1st run
+    if True:    # 1st run
         gammas = [0.003, 0.01, 0.03, 0.1, 0.3, 1]
         #### C = c: 0.1
         training = np.array([
@@ -211,19 +211,23 @@ else: # with stratify
         plt.show()
 
         # tunning
-    elif True:
-        gammas = [0.008, 0.01, 0.012]
+    if True:
+        gammas = [0.008, 0.009, 0.01, 0.012, 0.014]
         #### C = c: 2
         training = np.array([
+            0.9878714372346877,
+            0.9927228623408126,
             0.9945421467556095,
             0.9951485748938751,
-            0.9987871437234688,
+            0.9987871437234688
         ])
 
         testing = np.array([
+            0.847457627118644,
+            0.8450363196125908,
             0.8498789346246973,
             0.8595641646489104,
-            0.8571428571428571,
+            0.8571428571428571
         ])
         plt.plot(gammas, training, '-o', gammas, testing, '-o')
         plt.xlabel("Gammas")
@@ -232,12 +236,16 @@ else: # with stratify
 
         #### C = c: 2.5
         training = np.array([
+            0.9927228623408126,
+            0.9945421467556095,
             0.9957550030321407,
             1.0,
             1.0,
         ])
 
         testing = np.array([
+            0.8547215496368039,
+            0.8547215496368039,
             0.8595641646489104,
             0.864406779661017,
             0.8595641646489104,
@@ -246,12 +254,16 @@ else: # with stratify
 
         #### C = c: 3
         training = np.array([
+            0.9945421467556095,
+            0.9969678593086719,
             0.9993935718617344,
             1.0,
             1.0,
         ])
 
         testing = np.array([
+            0.8547215496368039,
+            0.8619854721549637,
             0.8595641646489104,
             0.864406779661017,
             0.8595641646489104,
@@ -260,4 +272,56 @@ else: # with stratify
         plt.legend(["C = 2 Training", "C = 2 Testing"] + ["C = 2.5 Training", "C = 2.5 Testing"] + ["C = 3 Training",
                                                                                                 "C = 3 Testing"])
         plt.title("SVM - RBF Kernel - tuning")
+        plt.show()
+
+    # no regularization
+    if True:
+        gammas = [0.008, 0.01, 0.012]
+        #### C = c: 1e10
+        training = np.array([
+            1.0,
+            1.0,
+            1.0,
+        ])
+
+        testing = np.array([
+            0.8547215496368039,
+            0.8571428571428571,
+            0.8692493946731235,
+        ])
+        plt.plot(gammas, training, '-o', gammas, testing, '-o')
+        plt.xlabel("Gammas")
+        plt.ylabel("Accuracy")
+        # plt.show()
+
+        #### C = c: 1e11
+        training = np.array([
+            1.0,
+            1.0,
+            1.0,
+        ])
+
+        testing = np.array([
+            0.8547215496368039,
+            0.8571428571428571,
+            0.8692493946731235,
+        ])
+        plt.plot(gammas, training, '-o', gammas, testing, '-o')
+
+        #### C = c: 1e12
+        training = np.array([
+            1.0,
+            1.0,
+            1.0,
+        ])
+
+        testing = np.array([
+            0.8547215496368039,
+            0.8571428571428571,
+            0.8692493946731235,
+        ])
+        plt.plot(gammas, training, '-o', gammas, testing, '-o')
+        plt.legend(["C = 1e10 Training", "C = 1e10 Testing"] + ["C = 1e11 Training", "C = 1e11 Testing"] + ["C = 1e12 Training",
+                                                                                                    "C = 1e12 Testing"])
+        plt.title("SVM - RBF Kernel - No Regularization")
         plt.show()

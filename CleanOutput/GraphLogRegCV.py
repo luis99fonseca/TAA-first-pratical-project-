@@ -104,7 +104,7 @@ if False:
 
 # with stratify
 if True:
-    if True:
+    if False:
         ## Method: LogReg
         ### Solver: Newton-cg
         Cs = [0.01, 0.03, 0.1, 0.3, 1, 1.3, 3, 6, 10]
@@ -211,3 +211,46 @@ if True:
             plt.ylabel("Accuracy")
             plt.title("Logistic Regression - Tuning")
             plt.show()
+
+    # no regularization
+    if True:
+        ## Method: LogReg
+        ### Solver: Newton-cg
+        Cs = [10000000000, 100000000000, 1000000000000]
+        training = np.array([
+            1.0,
+            1.0,
+            1.0,
+
+        ])
+
+        testing = np.array([
+            0.7360774818401937,
+            0.7336561743341404,
+            0.7360774818401937,
+        ])
+        plt.plot(Cs, training, '-o', Cs, testing, '-o')
+        # plt.legend(["Training", "Testing"])
+        plt.xlabel("Inverse of Regularization Strength")
+        plt.ylabel("Accuracy")
+
+        ### Solver: Lbfgs
+        Cs = [10000000000, 100000000000, 1000000000000]
+        training = np.array([
+            1.0,
+            1.0,
+            1.0,
+        ])
+        testing = [
+            0.7506053268765133,
+            0.7506053268765133,
+            0.7506053268765133,
+        ]
+
+        plt.plot(Cs, training, '-o', Cs, testing, '-o')
+        # plt.title("T1")
+        plt.legend(["N-cg Training", "N-cg Testing"] + ["Lbfgs Training", "Lbfgs Testing"])
+        plt.xlabel("Inverse of Regularization Strength")
+        plt.ylabel("Accuracy")
+        plt.title("Logistic Regression - No Regularization")
+        plt.show()

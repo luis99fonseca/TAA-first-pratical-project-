@@ -5,6 +5,13 @@ from sklearn.model_selection import train_test_split
 from sklearn import linear_model, svm
 import time
 from sklearn.model_selection import cross_validate, GridSearchCV
+import numpy as np
+from sklearn.metrics import plot_confusion_matrix, classification_report
+from sklearn.model_selection import train_test_split
+from sklearn import linear_model, svm
+import time
+from sklearn.model_selection import cross_validate, GridSearchCV
+import matplotlib.pyplot as plt
 
 # from https://github.com/darkin1/sign-language-digits-ml/blob/master/dataset_fixed.zip
 #   from https://www.kaggle.com/ardamavi/sign-language-digits-dataset/discussion/57074
@@ -66,7 +73,7 @@ if False:
 
 elif True:
     kernels = ['linear']
-    C_rgl = [0.02, 0.03, 0.4]
+    C_rgl = [0.06] #[0.02, 0.03, 0.04]
     for k in kernels:
         for c in C_rgl:
                     t1 = time.time()
@@ -80,3 +87,11 @@ elif True:
                     print("test accuracy: {} ".format(gscv.score(x_test_rolled, y_test_rolled)))
 
                     print("in: ", time.time() - t1)
+
+                    plot_confusion_matrix(gscv, x_test_rolled, y_test_rolled)
+                    plt.title("Confusion Matrix SVM: Linear Kernel - Testing")
+                    plt.show()
+                    plot_confusion_matrix(gscv, x_train_rolled, y_train_rolled)
+                    plt.show()
+                    predi = gscv.predict(x_test_rolled)
+                    print(classification_report(y_test_rolled, predi))

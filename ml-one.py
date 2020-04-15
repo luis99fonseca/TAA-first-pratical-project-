@@ -19,14 +19,23 @@ print(y.shape)
 
 number= 5
 
-# for i in range(1, number+1):
-#     ax = plt.subplot(1, number, i)
-#     plt.imshow(x[i])
-#     print(">> ", i, y[i])
-#     plt.gray()
-#     plt.axis('off')
-# plt.show()
+for i in range(1, number+1):
+    ax = plt.subplot(1, number, i)
+    plt.imshow(x[i])
+    print(">> ", i, y[i])
+    plt.gray()
+    plt.axis('off')
+plt.title("Exemplos Número 0")
+plt.show()
 
+for i in range(1, number+1):
+    ax = plt.subplot(1, number, i)
+    plt.imshow(x[i+400])
+    print(">> ", i, y[i+400])
+    plt.gray()
+    plt.axis('off')
+plt.title("Exemplos Número 1")
+plt.show()
 # inx = int(sys.argv[1])
 # plt.imshow(x[inx])
 # plt.title(y[inx])

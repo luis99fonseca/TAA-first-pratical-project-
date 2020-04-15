@@ -7,6 +7,7 @@ from sklearn import linear_model, svm
 import time
 from sklearn.model_selection import cross_validate, GridSearchCV
 import matplotlib.pyplot as plt
+import sys
 
 
 # from https://github.com/darkin1/sign-language-digits-ml/blob/master/dataset_fixed.zip
@@ -51,10 +52,10 @@ print(dict(zip(unique, counts)))
 
 # with CV
 # try 1
-if True:
+if False:
     kernels = ['rbf']
-    C_rgl = [3] #[0.1, 0.3, 1, 3]
-    gammas = [0.01] #[0.003, 0.01, 0.03, 0.1, 0.3, 1]
+    C_rgl =  [0.1, 0.3, 1, 3]
+    gammas =  [0.003, 0.01, 0.03, 0.1, 0.3, 1]
     for k in kernels:
         for c in C_rgl:
             for g in gammas:
@@ -71,18 +72,59 @@ if True:
 
                     print("in: ", time.time() - t1)
 
-    plot_confusion_matrix(gscv, x_test_rolled, y_test_rolled)
-    plt.show()
-    plot_confusion_matrix(gscv, x_train_rolled, y_train_rolled)
-    plt.show()
-    predi = gscv.predict(x_train_rolled)
-    print(classification_report(y_train_rolled, predi))
+    # plot_confusion_matrix(gscv, x_test_rolled, y_test_rolled)
+    # plt.show()
+    # plot_confusion_matrix(gscv, x_train_rolled, y_train_rolled)
+    # plt.show()
+    # predi = gscv.predict(x_train_rolled)
+    # print(classification_report(y_train_rolled, predi))
 
+if True:
+    kernels = ['rbf']
+    C_rgl =  [3]
+    gammas =  [0.009]
+    for k in kernels:
+        for c in C_rgl:
+            for g in gammas:
+                    t1 = time.time()
+                    svmRbg = svm.SVC()
+                    parameters = {'C': (c,), 'kernel':(k,), 'gamma':(g,)}
+                    gscv = GridSearchCV(svmRbg, param_grid=parameters)
+                    gscv.fit(x_train_rolled, y_train_rolled)
+                    print("GOOD: -------- c:", c, " - k:", k, " - ", "g:", g)
+                    print(">> best params ", gscv.best_params_)
+                    print("In ", t1 - time.time(), " s")
+                    print("train accuracy: {} ".format(gscv.score(x_train_rolled, y_train_rolled)))
+                    print("test accuracy: {} ".format(gscv.score(x_test_rolled, y_test_rolled)))
+
+                    print("in: ", time.time() - t1)
+print("OUTRO----------------------")
+if True:
+    kernels = ['rbf']
+    C_rgl =  [3]
+    gammas =  [0.009]
+    for k in kernels:
+        for c in C_rgl:
+            for g in gammas:
+                    t1 = time.time()
+                    svmRbg = svm.SVC(kernel=k, gamma=g, C=c)
+                    # parameters = {'C': (c,), 'kernel':(k,), 'gamma':(g,)}
+                    # gscv = GridSearchCV(svmRbg, param_grid=parameters)
+                    svmRbg.fit(x_train_rolled, y_train_rolled)
+                    print("GOOD: -------- c:", c, " - k:", k, " - ", "g:", g)
+                    # print(">> best params ", gscv.best_params_)
+                    print("In ", t1 - time.time(), " s")
+                    print("train accuracy: {} ".format(svmRbg.score(x_train_rolled, y_train_rolled)))
+                    print("test accuracy: {} ".format(svmRbg.score(x_test_rolled, y_test_rolled)))
+
+                    print("in: ", time.time() - t1)
+
+sys.exit(-1)
 # try 2: tunning
-elif False:
+if False:
     kernels = ['rbf']
     C_rgl = [1, 2, 3]
-    gammas = [0.008, 0.01, 0.012]
+    gammas = [0.008, 0.009, 0.01, 0.012, 0.014]
     for k in kernels:
         for c in C_rgl:
             for g in gammas:
@@ -100,8 +142,8 @@ elif False:
 # try 3: tunning
 elif True:
     kernels = ['rbf']
-    C_rgl = [2, 2.5, 3]
-    gammas = [0.01, 0.012, 0.014]
+    C_rgl = [3] #[2, 2.5, 3]
+    gammas = [0.009] #[0.01, 0.012, 0.014]
     for k in kernels:
         for c in C_rgl:
             for g in gammas:
@@ -116,3 +158,13 @@ elif True:
                     print("test accuracy: {} ".format(gscv.score(x_test_rolled, y_test_rolled)))
 
                     print("in: ", time.time() - t1)
+
+                    plot_confusion_matrix(gscv, x_test_rolled, y_test_rolled)
+                    plt.title("Confusion Matrix SVM: RBF Kernel - Testing")
+                    plt.show()
+                    plot_confusion_matrix(gscv, x_train_rolled, y_train_rolled)
+                    plt.show()
+                    predi = gscv.predict(x_test_rolled)
+                    print(classification_report(y_test_rolled, predi))
+                    print("in: ", time.time() - t1)
+                    predi = gscv.predict(x_train_rolled)

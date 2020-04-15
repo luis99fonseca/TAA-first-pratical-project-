@@ -4,6 +4,8 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn import linear_model
 import time
+from sklearn.metrics import plot_confusion_matrix, classification_report
+import matplotlib.pyplot as plt
 
 # from https://github.com/darkin1/sign-language-digits-ml/blob/master/dataset_fixed.zip
 #   from https://www.kaggle.com/ardamavi/sign-language-digits-dataset/discussion/57074
@@ -46,10 +48,10 @@ unique, counts = np.unique(y_test_rolled, return_counts=True)
 print(dict(zip(unique, counts)))
 
 # with CV
-if True:
+if False:
     solvers = ['newton-cg', 'lbfgs']
     penalties = ['l2']
-    C_rgl = [0.01, 0.03, 0.1, 0.3, 1, 1.3, 3, 6, 10]
+    C_rgl = [0.01, 0.03, 0.1, 0.3, 1, 1.3, 3, 6, 10]    # para no-reg: [10000000000, 100000000000, 1000000000000]
     for s in solvers:
         for p in penalties:
             # for c in C_rgl:
@@ -94,10 +96,10 @@ elif False:
                     print("in: ", time.time() - t1)
 
 # with CV, tunning 2
-elif True:
+if True:
         solvers = ['newton-cg', 'lbfgs']
         penalties = ['l2']
-        C_rgl = [0.08, 0.1, 0.12]
+        C_rgl = [0.1] #[0.08, 0.1, 0.12]
         for s in solvers:
             for p in penalties:
                 for c in C_rgl:
@@ -110,9 +112,25 @@ elif True:
                     print("train accuracy: {} ".format(logreg.score(x_train_rolled, y_train_rolled)))
                     print("test accuracy: {} ".format(logreg.score(x_test_rolled, y_test_rolled)))
 
-                    print("scores2: ", logreg.scores_)
+                    t1 = time.time()  # 5 é o default
+                    logreg = linear_model.LogisticRegression(random_state=42, max_iter=15000, solver=s, penalty=p, C=c)
+                    logreg.fit(x_train_rolled, y_train_rolled)
+                    print("GOOD: -------- s:", s, " - p:", p, " - ", "c:", c)
+                    print("In ", t1 - time.time(), " s")
+                    print("train accuracy: {} ".format(logreg.score(x_train_rolled, y_train_rolled)))
+                    print("test accuracy: {} ".format(logreg.score(x_test_rolled, y_test_rolled)))
 
-                    print("Cs2: ", logreg.Cs_)
-                    print("best C: ", logreg.C_)
 
-                    print("in: ", time.time() - t1)
+                    # print("scores2: ", logreg.scores_)
+                    #
+                    # print("Cs2: ", logreg.Cs_)
+                    # print("best C: ", logreg.C_)
+                    # plot_confusion_matrix(logreg, x_test_rolled, y_test_rolled)
+                    # plt.title("Confusion Matrix Logistic Regression - Testing")
+                    # plt.show()
+                    # plot_confusion_matrix(logreg, x_train_rolled, y_train_rolled)
+                    # plt.show()
+                    # predi = logreg.predict(x_test_rolled)
+                    # print(classification_report(y_test_rolled, predi))
+                    # print("in: ", time.time() - t1)
+                    # predi = gscv.predict(x_train_rolled)
