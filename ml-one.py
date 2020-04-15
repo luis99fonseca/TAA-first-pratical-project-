@@ -19,21 +19,30 @@ print(y.shape)
 
 number= 5
 
-# for i in range(1, number+1):
-#     ax = plt.subplot(1, number, i)
-#     plt.imshow(x[i])
-#     print(">> ", i, y[i])
-#     plt.gray()
-#     plt.axis('off')
-# plt.show()
-
-inx = int(sys.argv[1])
-plt.imshow(x[inx])
-plt.title(y[inx])
+for i in range(1, number+1):
+    ax = plt.subplot(1, number, i)
+    plt.imshow(x[i])
+    print(">> ", i, y[i])
+    plt.gray()
+    plt.axis('off')
+plt.title("Exemplos Número 0")
 plt.show()
 
+for i in range(1, number+1):
+    ax = plt.subplot(1, number, i)
+    plt.imshow(x[i+400])
+    print(">> ", i, y[i+400])
+    plt.gray()
+    plt.axis('off')
+plt.title("Exemplos Número 1")
+plt.show()
+# inx = int(sys.argv[1])
+# plt.imshow(x[inx])
+# plt.title(y[inx])
+# plt.show()
 
-x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.2, random_state=44)
+
+x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.2, random_state=44, stratify=y)
 
 print("Training set feature matrix shape: " + str(x_train.shape))
 print("Training set classification matrix shape: " + str(y_train.shape))

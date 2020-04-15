@@ -30,8 +30,8 @@ number = 5
 kernels = ['linear']
 Css = [0.3, 1, 3, 10, 30] # [0.01, 0.03, 0.1,
 
-# with open("resultsNew.txt", "w") as file01:
-if True:
+with open("04resultsNtLinear.txt", "w") as file01:
+# if True:
     if True:
         for c in Css:
             coords1 = []
@@ -81,10 +81,10 @@ if True:
                     #     svm.SVC(kernel='rbf', class_weight='balanced'), param_grid
                     # )
                     temp_obj = logreg.fit(x_train_rolled, y_train_rolled)
-                    # file01.write("---------- c=" + str(c) + "; g=" + str(g) + "; k=" + str(k) + "\n")
-                    # file01.write("train accuracy: {} ".format(temp_obj.score(x_train_rolled, y_train_rolled)) + "\n")
-                    # file01.write("test accuracy: {} ".format(temp_obj.score(x_test_rolled, y_test_rolled)) + "\n")
-                    # file01.write("end ----------" + "\n")
+                    file01.write("---------- c=" + str(c) + "; g=" + str(g) + "; k=" + str(k) + "\n")
+                    file01.write("train accuracy: {} ".format(temp_obj.score(x_train_rolled, y_train_rolled)) + "\n")
+                    file01.write("test accuracy: {} ".format(temp_obj.score(x_test_rolled, y_test_rolled)) + "\n")
+                    file01.write("end ----------" + "\n")
                     print("train accuracy: {} ".format(temp_obj.score(x_train_rolled, y_train_rolled)))
                     print("test accuracy: {} ".format(temp_obj.score(x_test_rolled, y_test_rolled)))
                     coords1.append(temp_obj.score(x_train_rolled, y_train_rolled))

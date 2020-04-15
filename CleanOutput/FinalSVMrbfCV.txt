@@ -1,0 +1,168 @@
+(2062, 64, 64)
+(2062, 10)
+Training set feature matrix shape: (1649, 64, 64)
+Training set classification matrix shape: (1649, 10)
+Testing set feature matrix shape: (413, 64, 64)
+Testing set classification matrix shape: (413, 10)
+------------------------------------------------
+n:  4096 ; m:  1649
+(1649, 4096)
+Training set rolled feature matrix shape:  (1649, 4096)
+Training set rolled classification matrix shape:  (1649,)
+------------------------------------------------
+nt:  4096 ; mt:  413
+Testing set rolled feature matrix shape:  (413, 4096)
+Testing set rolled classification matrix shape:  (413,)
+>>>  [8 3 2 ... 2 5 8]
+{0: 162, 1: 165, 2: 173, 3: 152, 4: 162, 5: 169, 6: 165, 7: 162, 8: 169, 9: 170}
+{0: 43, 1: 41, 2: 33, 3: 54, 4: 45, 5: 38, 6: 42, 7: 44, 8: 39, 9: 34}
+GOOD: -------- c: 0.1  - k: rbf  -  g: 0.003
+In  -105.77237963676453  s
+train accuracy: 0.3959975742874469 
+test accuracy: 0.29539951573849876 
+in:  123.17008829116821
+GOOD: -------- c: 0.1  - k: rbf  -  g: 0.01
+In  -103.90101218223572  s
+train accuracy: 0.6124924196482717 
+test accuracy: 0.47699757869249393 
+in:  121.35057234764099
+GOOD: -------- c: 0.1  - k: rbf  -  g: 0.03
+In  -108.13742399215698  s
+train accuracy: 0.19648271679805943 
+test accuracy: 0.1162227602905569 
+in:  125.95655512809753
+GOOD: -------- c: 0.1  - k: rbf  -  g: 0.1
+In  -108.64105319976807  s
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+in:  126.69517421722412
+GOOD: -------- c: 0.1  - k: rbf  -  g: 0.3
+In  -108.28307604789734  s
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+in:  126.12902975082397
+GOOD: -------- c: 0.1  - k: rbf  -  g: 1
+In  -109.36287069320679  s
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+in:  127.22546577453613
+GOOD: -------- c: 0.3  - k: rbf  -  g: 0.003
+In  -93.00684309005737  s
+train accuracy: 0.7325651910248635 
+test accuracy: 0.5956416464891041 
+in:  110.25794339179993
+GOOD: -------- c: 0.3  - k: rbf  -  g: 0.01
+In  -87.99323463439941  s
+train accuracy: 0.8405093996361431 
+test accuracy: 0.6924939467312349 
+in:  104.90871500968933
+GOOD: -------- c: 0.3  - k: rbf  -  g: 0.03
+In  -104.59339666366577  s
+train accuracy: 0.9011522134627047 
+test accuracy: 0.5641646489104116 
+in:  121.98178958892822
+GOOD: -------- c: 0.3  - k: rbf  -  g: 0.1
+In  -105.68558120727539  s
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+in:  123.01592874526978
+GOOD: -------- c: 0.3  - k: rbf  -  g: 0.3
+In  -105.33302187919617  s
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+in:  122.83454370498657
+GOOD: -------- c: 0.3  - k: rbf  -  g: 1
+In  -105.89089727401733  s
+train accuracy: 0.10491206791995149 
+test accuracy: 0.07990314769975787 
+in:  123.33662414550781
+GOOD: -------- c: 1  - k: rbf  -  g: 0.003
+In  -69.64761161804199  s
+train accuracy: 0.8696179502728927 
+test accuracy: 0.7312348668280871 
+in:  85.20913648605347
+GOOD: -------- c: 1  - k: rbf  -  g: 0.01
+In  -73.69861555099487  s
+train accuracy: 0.9648271679805943 
+test accuracy: 0.784503631961259 
+in:  89.43647766113281
+GOOD: -------- c: 1  - k: rbf  -  g: 0.03
+In  -104.36452579498291  s
+train accuracy: 1.0 
+test accuracy: 0.7796610169491526 
+in:  121.4316680431366
+GOOD: -------- c: 1  - k: rbf  -  g: 0.1
+In  -104.43499279022217  s
+train accuracy: 1.0 
+test accuracy: 0.3099273607748184 
+in:  121.56701874732971
+GOOD: -------- c: 1  - k: rbf  -  g: 0.3
+In  -104.85289120674133  s
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+in:  122.22019791603088
+GOOD: -------- c: 1  - k: rbf  -  g: 1
+In  -108.0693941116333  s
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+in:  126.03231453895569
+GOOD: -------- c: 3  - k: rbf  -  g: 0.003
+In  -58.06740760803223  s
+train accuracy: 0.9496664645239539 
+test accuracy: 0.7869249394673123 
+in:  72.77686381340027
+GOOD: -------- c: 3  - k: rbf  -  g: 0.01
+In  -90.43154239654541  s
+train accuracy: 0.9993935718617344 
+test accuracy: 0.8208232445520581 
+in:  106.09481739997864
+GOOD: -------- c: 3  - k: rbf  -  g: 0.03
+In  -107.98040223121643  s
+train accuracy: 1.0 
+test accuracy: 0.8038740920096852 
+in:  125.88269376754761
+GOOD: -------- c: 3  - k: rbf  -  g: 0.1
+In  -108.8939938545227  s
+train accuracy: 1.0 
+test accuracy: 0.35108958837772397 
+in:  126.95988941192627
+GOOD: -------- c: 3  - k: rbf  -  g: 0.3
+In  -109.05815863609314  s
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+in:  127.02523994445801
+GOOD: -------- c: 3  - k: rbf  -  g: 1
+In  -109.4819233417511  s
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+in:  127.52760219573975
+GOOD: -------- c: 6  - k: rbf  -  g: 0.003
+In  -54.92907524108887  s
+train accuracy: 0.9812007277137659 
+test accuracy: 0.7966101694915254 
+in:  68.98115015029907
+GOOD: -------- c: 6  - k: rbf  -  g: 0.01
+In  -89.90436339378357  s
+train accuracy: 1.0 
+test accuracy: 0.8208232445520581 
+in:  106.07934927940369
+GOOD: -------- c: 6  - k: rbf  -  g: 0.03
+In  -105.72293996810913  s
+train accuracy: 1.0 
+test accuracy: 0.8038740920096852 
+in:  123.29637336730957
+GOOD: -------- c: 6  - k: rbf  -  g: 0.1
+In  -104.50856256484985  s
+train accuracy: 1.0 
+test accuracy: 0.35108958837772397 
+in:  121.56203126907349
+GOOD: -------- c: 6  - k: rbf  -  g: 0.3
+In  -102.0602970123291  s
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+in:  118.59346842765808
+GOOD: -------- c: 6  - k: rbf  -  g: 1
+In  -102.5842661857605  s
+train accuracy: 1.0 
+test accuracy: 0.07990314769975787 
+in:  119.19118976593018

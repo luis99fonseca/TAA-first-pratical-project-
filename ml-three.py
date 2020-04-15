@@ -38,7 +38,7 @@ C_rgl = [0.01, 0.03, 0.1, 0.3, 1, 1.3]
 C_rgl = [3]
 test_sizes = [0.2]
 
-if True:
+if False:
     for t in test_sizes:
         for c in C_rgl:
 
@@ -83,7 +83,7 @@ if True:
 
             print("END---------------------------", time.time() - t1)
 
-elif False:
+else:
     t = 0.2
     c = 0.3
 
